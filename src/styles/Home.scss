@@ -1,0 +1,88 @@
+.backgroundImage {
+  position: absolute;
+  display: flex;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://img.freepik.com/free-vector/white-background-with-zigzag-pattern-design_1017-33197.jpg?w=2000");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: -1;
+  .contentWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    width: 50%;
+    font-family: "Gill Sans", sans-serif;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  .homeDiv {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 30px;
+    row-gap: 30px;
+
+    .topWrap,
+    .bottomWrap {
+      display: flex;
+      justify-content: center;
+      column-gap: 15px;
+      height: 250px;
+      width: 650px;
+    }
+
+    .jewelery,
+    .womensClothes,
+    .electronics,
+    .mensClothes {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      min-width: 275px;
+
+      .rounded-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 8%;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        &:hover {
+          transform: scale(1.03);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+    .category-link {
+      position: relative;
+      text-decoration: none;
+      transition: opacity 0.3s;
+      margin: 0 10px;
+      .category-link:hover {
+        opacity: 0.7;
+      }
+    }
+    .category-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .category-link:hover .category-text {
+      opacity: 1;
+    }
+  }
+}
